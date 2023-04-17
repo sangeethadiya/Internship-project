@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %} 
+adduser
+{% endblock %}
+
+{% block content %}
+
+{% if success %}
+    <div class="alert alert-success" role="alert">
+        The new user added successfully.
+        <a href="{% url 'productcreate' %}" class="alert-link">Go to viewpropertypage</a>
+    </div>
+{% else %}
+
+    <br>
+    <div class="row justify-content-center">
+        <div class="col-6"><div class="card bg-light mb-3">
+            <div class="card-header" style="color: brown;text-align:center;"><i class="fa-solid fa-address-card fa-lg">User Registration</i></div>
+        <div class="card-body">
+            <form action="{% url 'add_user' %}" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Add</button>
+            <a href="{% url 'viewpro' %}" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+        </div>  
+    </div>
+{% endif %}
+{% endblock %}

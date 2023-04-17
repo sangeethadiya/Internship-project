@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} 
+BOOKING
+{% endblock %}
+{% block content %}
+    <body>
+        
+        <h2 style="text-align: center; color: blue;"> Dear customer,book your favourite property!!!</h2><br>
+    <div class="container-fluid">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input  class="btn btn-primary" type="submit" value=BOOK ><br><br>
+        </form>
+            
+       
+
+    </div>
+        
+    
+    </body>
+{% endblock %}

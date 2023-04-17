@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} 
+Favourite ppty
+{% endblock %}
+{% block content %}
+<div class="alert alert-success" role="alert">
+    The  property is booked successfully.
+    <a href="{% url 'home' %}" class="alert-link">we will contact you soon!!</a>
+</div>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} 
+ADVERTISEMENT
+{% endblock %}
+{% block content %}
+<form class="d-flex" role="search">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-primary" type="submit">Search</button>
+</form>
+    <h2 style="text-align: center; color: blue;"> ADVERTISEMENT PAGE</h2>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">mssubclass</th>
+                <th scope="col">mszoning</th>
+                <th scope="col">street</th>
+                <th scope="col">alley</th>
+                <th scope="col">bedroomabvgr</th>
+                <th scope="col">kitchenabvgr</th>
+                <th scope="col">garagearea</th>
+                <th scope="col">paveddrive</th>
+                <th scope="col">saletype</th>
+                <th scope="col">salecondition</th>
+                <th scope="col">saleprice</th>
+                <!-- <th scope="col"></th> -->
+              </tr>
+            </thead>
+            <tbody>
+            {% for eachdata in propertydata %}
+            <tr>
+                <td>{{eachdata.id}} </td>
+                <td>{{eachdata.mssubclass}} </td>
+                <td>{{eachdata.mszoning}} </td>
+                <td>{{eachdata.street}} </td>
+                <td>{{eachdata.alley}} </td>
+                <td>{{eachdata.bedroomabvgr}} </td>
+                <td>{{eachdata.kitchenabvgr}} </td>
+                <td>{{eachdata.garagearea}} </td>
+                <td>{{eachdata.paveddrive}} </td>
+                <td>{{eachdata.saletype}} </td>
+                <td>{{eachdata.salecondition}} </td>
+                <td>{{eachdata.saleprice}} </td>
+            </tr>
+                
+    
+
+
+    {% endfor %}
+{% endblock %}

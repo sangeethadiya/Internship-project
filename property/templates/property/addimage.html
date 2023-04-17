@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %} 
+adduser
+{% endblock %}
+
+{% block content %}
+<div class="alert alert-success" role="alert">
+    The new image added successfully.
+    <a href="{% url 'viewpro' %}" class="alert-link">Go to viewpropertypage</a>
+</div>
+{% endblock %}

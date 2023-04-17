@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %} 
+HOME
+{% endblock %}
+
+{% block content %}
+
+{% load static %}
+<div class="m-4">
+    
+    <img src="{% static 'property/house1.jpg' %}" height="250" width="450">
+    <img src="{% static 'property/house2.jpg' %}" height="250" width="480">
+    <img src="{% static 'property/pic1.jpg' %}" height="250" width="350"><br><br>
+    <h4 class="text-center" style="color: red;">About Us</h4>
+    <p><b>Housing Property management is a highly demanding application area. The Project deals with the development of a web based application for end users to work with the management of housing properties. This online Property management system can help you to get best property by just sitting at home or anywhere.</b></p>
+    <p><b>People can book their favorite property online just after a few clicks. In this system the users can add the property for selling/ buying purpose and users can  buy or sell properties based on their selection.</b></p>
+</div>
+
+
+
+<!-- <div class="container">
+
+  <h3 style="color: brown;text-align:center;">Please Register here!!</h3><br><br>
+                
+                <form action="viewproperty/" method="post">
+                    {% csrf_token %}
+                    FirstName:<input type="text" name="first_name" placeholder="enter firstname">
+                    LastName:<input type="text" name="last_name"  placeholder="enter lastname"><br><br>
+                    EmailID: <input type="email" name="email" placeholder="enter email">
+                    Username:<input type="text" name="username " placeholder="enter username"><br><br>
+                    Password:<input type="password" name="password1" placeholder="enter password">
+                  ConfirmPassword:<input type="password" name="password2" placeholder="enter password"><br><br>
+                    <button type="submit" class="btn btn-danger">Register</button>
+                </form>
+
+
+</div>
+     -->
+
+    
+            
+                
+        
+               
+{% endblock %}

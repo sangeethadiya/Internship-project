@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} 
+VIEW
+{% endblock %}
+{% block content %}
+<form class="d-flex" role="search">
+    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-primary" type="submit">Search</button>
+</form>
+<br>
+<div class="container">
+        <div class="row">
+    {% for dest in dests %}
+        <div class="col-md-4">
+            <div class="card" style="width: 10rem;">
+                <img src="{{dest.image.url}}"height="100" width="150" class="card-img-top" alt="no img">
+                
+                <!-- <div class="card-body">
+                  <p class="card-text"style="color:red;font-size: small;">{{dest.title}}<br><b>Rs{{dest.price}}<br>sqft:{{dest.sqft}}</b></p>
+                </div> -->
+            </div>
+            <p style="font-size: small;"><b>{{dest.title}}<br>Rs{{dest.price}}<br>sqft:{{dest.sqft}}</b></p>
+            <br> 
+        </div>
+           
+    {% endfor %}
+    </div>
+</div>
+</ul>
+
+{% endblock %}
